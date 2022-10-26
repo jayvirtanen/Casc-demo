@@ -1,0 +1,16 @@
+jenkins:
+  systemMessage: "Configured automatically by Configuration as Code for Controllers (2.303.3) with example config files\n\n"
+
+unclassified:
+  globalConfigFiles:
+    configs:
+      - inactiveItemSettings:
+          id: "inactive-items-config"
+          providerId: "com.cloudbees.jenkins.plugins.inactive.InacctiveItemsConfiguration"
+          content: |
+            <?xml version='1.1' encoding='UTF-8'?>
+            <com.cloudbees.jenkins.plugins.inactive.InactiveItemsConfiguration plugin="cloudbees-inactive-items@0.2">
+            <analysisFrequencyInDays>1</analysisFrequencyInDays>
+            <daysBeforeConsideredInactive>3</daysBeforeConsideredInactive>
+            <analysisEnabled>true</analysisEnabled>
+            </com.cloudbees.jenkins.plugins.inactive.InactiveItemsConfiguration>
