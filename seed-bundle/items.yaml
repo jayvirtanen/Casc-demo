@@ -1,0 +1,9 @@
+removeStrategy:
+  items: "none"
+  rbac: "sync"
+
+items:
+  - kind: "pipeline"
+    name: "project-beta-pipeline-job"
+    displayName: "Project Beta Pipeline job"
+    description: "This is Project Beta's Pipeline job!"
