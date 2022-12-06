@@ -6,13 +6,5 @@ allowCapExceptions: true
 availabilityPattern: "*"
 jcasc:
   - "jenkins.yaml"
-plugins:
-  - "plugins.yaml"
-catalog:
-  - "plugin-catalog.yaml"
 items:
   - "items.yaml"
-rbac:
-  - "rbac.yaml"
-variables:
-  - "variables.yaml"
