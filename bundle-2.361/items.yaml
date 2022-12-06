@@ -1,30 +1,14 @@
 removeStrategy:
-  rbac: SYNC
+  items: 'NONE'
+  rbac: 'SYNC'
+
 items:
-  - kind: "pipeline"
-    name: "project-beta-pipeline-job"
-    displayName: "Project Beta Pipeline job"
-    description: "This is Project Beta's Pipeline job!"
-    definition:
-      cpsScmFlowDefinition:
-        scriptPath: "Jenkinsfile"
-        scm:
-          gitSCM:
-            gitTool: "git"
-            userRemoteConfigs:
-              - userRemoteConfig:
-                  name: "developer-b"
-                  credentialsId: "credentials-id"
-                  url: "git@github.com:company/project-beta.git"
-            extensions:
-              - checkoutOption:
-                  timeout: 2
-              - cloneOption:
-                  reference: "/workspace/git"
-                  noTags: false
-                  honorRefspec: false
-                  shallow: true
-                  timeout: 5
-            branches:
-              - branchSpec:
-                  name: "*/main"
+  - kind: freeStyle
+    name: freestyle-example
+    displayName: Freestyle Job example
+    label: agent
+    builders:
+      - shell:
+          command: |-
+            #!/usr/bin/env bash
+            echo "Hello world"
